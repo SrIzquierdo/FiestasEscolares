@@ -14,23 +14,16 @@
                 <nav>
                     <?php
                         if(isset($_SESSION['id'])){
-                            ?>
-                            <a href="?controlador=Controlador&metodo=vistaClase" class="verTabla">Clase</a>
-                            <a href="?controlador=Controlador&metodo=vistaActividades" class="verTabla">Inscripciones</a>
+                            if($_SESSION['perfil'] == 2){ ?>
+                            <a href="?controlador=Controlador&metodo=vistaClase" class="verTabla">Clase</a> <!-- Solo si es tutor -->
+                            <a href="?controlador=Controlador&metodo=vistaActividades" class="verTabla">Inscripciones</a> <!-- Solo si es tutor o coordinador -->
+                            <?php }
+                            if($_SESSION['perfil'] == 1){ ?>
+                                <a href="?controlador=Momento&metodo=vistaListar" class="verTabla">Momentos</a> <!-- Solo si es coordinador -->
+                                <a href="?controlador=Actividad&metodo=vistaListar" class="verTabla">Actividades</a>
+                            <?php }?>
                             <a href="?controlador=Sesion&metodo=cerrarSesion" class="botonSesion">Cerrar sesión</a>
                             <?php
-                        }
-                        else{
-                            if($metodo == 'vistaRegistro'){
-                                ?>
-                                <a href="?controlador=Sesion&metodo=vistaSesion" class="botonSesion">Iniciar Sesión</a>
-                                <?php
-                            }
-                            else{
-                                ?>
-                                <a href="?controlador=Sesion&metodo=vistaRegistro" class="botonSesion">Registrarse</a>
-                                <?php
-                            }
                         }
                     ?>
                 </nav>

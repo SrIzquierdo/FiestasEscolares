@@ -4,9 +4,9 @@
     //define('PSW',"");
     //define('BDD',"fiestas_escolares");
 
-    define('HOST',"2daw.esvirgua.com");
-    define('USER',"user2daw_07");
-    define('PSW',".+#aUGC!2OK&");
-    define('BDD',"user2daw_BD2-07");
+    define('HOST',"proyectos.esvirgua.com");
+    define('USER',"proyectosevg_06");
+    define('PSW',"lu#vAlS+5i3[");
+    define('BDD',"proyectosevg_BD1-06");
 
     

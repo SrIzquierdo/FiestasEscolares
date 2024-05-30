@@ -4,24 +4,19 @@
         /**
          * Función que devuleve los datos del tutor o false si no devuelve ninguna fila.
          */
-        public function inicio_sesion($usuario, $psw){
-            $sql = "SELECT id, nombre, psw FROM tutor
-            WHERE usuario = ?;";
+        public function inicio_sesion($correo){
+            $sql = "SELECT Usuarios.idUsuario AS id, Usuarios.nombre, idPerfil AS perfil FROM Usuarios
+            JOIN Perfiles_Usuarios ON Usuarios.idUsuario = Perfiles_Usuarios.idUsuario
+            WHERE correo = ?;";
             $stmt = $this->conexion->prepare($sql);
-            $stmt->bind_param('s', $usuario);
+            $stmt->bind_param('s', $correo);
             $stmt->execute();
 
             $resul = $stmt->get_result();
             $stmt->close();
             if($resul->num_rows > 0){
                 $datos = $resul->fetch_assoc();
-                if(password_verify($psw,$datos['psw'])){
-                    unset($datos['psw']);
-                    return $datos;
-                }
-                else{
-                    return false;
-                }
+                return $datos;
             }
             else{
                 return false;

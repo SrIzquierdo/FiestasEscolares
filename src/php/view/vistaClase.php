@@ -1,5 +1,5 @@
         <main class="contenedor">
-            <h2>Clase: <?php echo $datos[0]['clase']; ?> <a href="?controlador=Clase&metodo=vistaDatosClase">Datos de la clase</a></h2>
+            <h2>Clase: <?php    echo $datos[0]['clase']; ?></h2>
             <?php if(file_exists("classes/".$datos[0]['clase']."Imagen.jpg")){ ?>
             <img src="classes/<?php echo $datos[0]['clase']; ?>Imagen.jpg">
             <?php } ?>

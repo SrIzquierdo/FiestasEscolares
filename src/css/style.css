@@ -10,8 +10,8 @@ body {
     background-color: #f4f4f4;
 }
 
-main{
-    width: 800px;
+main {
+    width: 1000px;  /* Incrementa el ancho del main */
     padding: 20px;
     margin: 0 auto;
     background-color: #fff;
@@ -76,7 +76,6 @@ nav a:hover {
 .botonSesion:hover {
     background-color: #c0392b;
 }
-/*  */
 
 h1 {
     color: #333;
@@ -89,7 +88,7 @@ h2 {
     margin-bottom: 10px;
 }
 
-h2.mensaje{
+h2.mensaje {
     color: #e74c3c;
     margin-bottom: 20px;
     text-align: center;
@@ -112,7 +111,7 @@ table th, table td {
     text-align: left;
 }
 
-table tr:nth-child(odd){
+table tr:nth-child(odd) {
     background-color: #f2f2f2;
 }
 
@@ -138,7 +137,7 @@ a.inscribir:hover {
     text-decoration: underline;
 }
 
-a.boton{
+a.boton {
     font-size: 16px;
     text-decoration: none;
     background-color: #3498db;
@@ -150,7 +149,8 @@ a.boton{
     transition: background-color 0.3s ease;
     display: inline-block;
 }
-a.boton:hover{
+
+a.boton:hover {
     background-color: #2980b9;
 }
 
@@ -187,11 +187,7 @@ input[type="submit"]:hover, .submit:hover {
 
 /* Estilos para el formulario de inicio de sesión y registro */
 main.sesion {
-    max-width: 400px;
-}
-
-main.sesion {
-    max-width: 400px;
+    max-width: 1000px; /* Incrementa el ancho del main.sesion */
     margin: 0 auto;
     background-color: #fff;
     border-radius: 8px;
@@ -244,9 +240,8 @@ main.sesion form input[type="submit"]:hover {
     background-color: #2980b9;
 }
 
-/* Estilos del formulario de añadir alumnos */
 main.formAlumnos {
-    max-width: 800px;
+    max-width: 1000px; /* Incrementa el ancho del main.formAlumnos */
     margin: 0 auto;
     padding: 20px;
     background-color: #fff;
@@ -259,7 +254,7 @@ main.formAlumnos form {
     flex-direction: column;
 }
 
-main.formAlumnos form>div {
+main.formAlumnos form > div {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
@@ -268,7 +263,7 @@ main.formAlumnos form>div {
     padding: 5px 0;
 }
 
-main.formAlumnos form>div div{
+main.formAlumnos form > div div {
     display: flex;
     align-items: flex-start;
 }
@@ -286,7 +281,7 @@ main.formAlumnos form label {
 }
 
 main.formAlumnos input[type="text"],
-main.formAlumnos input[type="radio"]{
+main.formAlumnos input[type="radio"] {
     padding: 10px;
     border-radius: 4px;
     border: 1px solid #ddd;
@@ -294,12 +289,14 @@ main.formAlumnos input[type="radio"]{
     display: inline-block;
 }
 
-main.formAlumnos input[type="text"]{
+main.formAlumnos input[type="text"] {
     width: 95%; /* Ancho ajustado */
 }
-main.formAlumnos input[type="radio"]{
+
+main.formAlumnos input[type="radio"] {
     margin: 3px 5px;
 }
+
 input[type="file"] {
     padding: 10px;
     border-radius: 4px;
@@ -309,9 +306,10 @@ input[type="file"] {
     width: 95%; /* Ancho ajustado */
 }
 
-main.formAlumnos form>p {
+main.formAlumnos form > p {
     margin: 0; /* Eliminar el margen predeterminado */
 }
+
 /* Estilo de los selectores de las inscripciones */
 select {
     appearance: none;
@@ -332,16 +330,17 @@ select:focus {
     border-color: #4d90fe;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
-  
+
 /* Estilo para las opciones dentro del selector */
 select option {
     padding: 10px;
 }
 
-img{
+img {
     width: 450px;
 }
-#divImagenClase{
+
+#divImagenClase {
     width: 500px;
     display: flex;
     align-items: center;
@@ -351,10 +350,12 @@ img{
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 15px;
 }
-#divImagenClase img{
+
+#divImagenClase img {
     width: 90%;
 }
-#divImagenClase p{
+
+#divImagenClase p {
     display: flex;
     align-content: center;
     justify-content: center;
@@ -362,4 +363,77 @@ img{
     height: 300px;
     text-align: center;
     font-size: 25px;
+}
+
+/* Estilos adicionales */
+.header-momentos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.boton.modificar {
+    background-color: #f39c12;
+}
+
+.boton.modificar:hover {
+    background-color: #e67e22;
+}
+
+.boton.borrar {
+    background-color: #e74c3c;
+}
+
+.boton.borrar:hover {
+    background-color: #c0392b;
+}
+/* Estilos para el formulario de crear momento */
+main.formMomento {
+    max-width: 600px; /* Ajusta el ancho del main.formMomento */
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+main.formMomento h1 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+main.formMomento form {
+    display: flex;
+    flex-direction: column;
+}
+
+main.formMomento form label {
+    color: #333;
+    margin-bottom: 5px;
+}
+
+main.formMomento form input[type="text"],
+main.formMomento form input[type="date"] {
+    width: calc(100% - 20px); /* Ajusta el ancho restando padding */
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+main.formMomento form input[type="submit"] {
+    font-size: 16px;
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+main.formMomento form input[type="submit"]:hover {
+    background-color: #2980b9;
 }

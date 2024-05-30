@@ -6,19 +6,15 @@
                 }
             ?>
             <form action="?controlador=Sesion&metodo=inicioSesion" method="post">
-                <p>
-                    <label for="nombreUsuario">Usuario</label>
-                    <input type="text" id="nombreUsuario" name="nombreUsuario">
-                </p>
-                <p>
-                    <label for="pswUsuario">Contraseña</label>
-                    <input type="password" name="pswUsuario" id="pswUsuario">
-                </p>
+                
+                <label for="nombreUsuario">Correo electrónico:</label>
+                <input type="text" name="nombreUsuario" id="nombreUsuario">
+                
                 <p>
                     <label for="recuerdame">¿Recordar sesión?</label>
                     <input type="checkbox" name="recuerdame" id="recuerdame">
                 </p>
-                <input type="submit" value="Enviar">
+                <input type="submit" value="Iniciar Sesión">
             </form>
         </main>
     </body>
